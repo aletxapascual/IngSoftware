@@ -60,11 +60,10 @@ const register = asyncHandler(async(req, res) => {
             throw new Error ('No se pudieron guardar los datos')
         }
     }
-
 })
 
 const data = (req, res) => {
-    res.status(200).json({message:'login'})
+    res.status(200).json(req.user)
 }
 
 const generarToken = (id) => {
